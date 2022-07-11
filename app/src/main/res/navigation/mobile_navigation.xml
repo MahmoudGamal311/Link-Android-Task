@@ -3,13 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_explore">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.linkdevelopment.newsfeedapp.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/nav_explore"
+        android:name="com.linkdevelopment.newsfeedapp.ui.explore.ExploreFragment"
+        android:label="@string/menu_explore"
+        tools:layout="@layout/fragment_explore" />
+
+    <fragment
+        android:id="@+id/nav_live_chat"
+        android:name="com.linkdevelopment.newsfeedapp.ui.livechat.LiveChatFragment"
+        android:label="@string/menu_live_chat"
+        tools:layout="@layout/fragment_livechat" />
 
     <fragment
         android:id="@+id/nav_gallery"
@@ -17,9 +23,17 @@
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
+
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.linkdevelopment.newsfeedapp.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_wish_list"
+        android:name="com.linkdevelopment.newsfeedapp.ui.wishlist.WishListFragment"
+        android:label="@string/menu_wish"
+        tools:layout="@layout/fragment_wishlist" />
+
+    <fragment
+        android:id="@+id/nav_emagazine"
+        android:name="com.linkdevelopment.newsfeedapp.ui.emagazine.eMagazineFragment"
+        android:label="@string/menu_magazine"
+        tools:layout="@layout/fragment_emagazine" />
+
 </navigation>

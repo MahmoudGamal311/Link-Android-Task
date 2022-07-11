@@ -1,4 +1,4 @@
-package com.linkdevelopment.newsfeedapp.ui.slideshow;
+package com.linkdevelopment.newsfeedapp.ui.livechat;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,18 +10,18 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.linkdevelopment.newsfeedapp.databinding.FragmentSlideshowBinding;
+import com.linkdevelopment.newsfeedapp.databinding.FragmentLivechatBinding;
 
-public class SlideshowFragment extends Fragment {
+public class LiveChatFragment extends Fragment {
 
-    private FragmentSlideshowBinding binding;
+    private FragmentLivechatBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        SlideshowViewModel slideshowViewModel =
-                new ViewModelProvider(this).get(SlideshowViewModel.class);
+        LiveChatViewModel slideshowViewModel =
+                new ViewModelProvider(this).get(LiveChatViewModel.class);
 
-        binding = FragmentSlideshowBinding.inflate(inflater, container, false);
+        binding = FragmentLivechatBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textSlideshow;

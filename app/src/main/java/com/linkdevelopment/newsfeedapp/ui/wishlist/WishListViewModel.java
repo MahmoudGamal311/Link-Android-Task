@@ -1,16 +1,16 @@
-package com.linkdevelopment.newsfeedapp.ui.slideshow;
+package com.linkdevelopment.newsfeedapp.ui.wishlist;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SlideshowViewModel extends ViewModel {
+public class WishListViewModel extends ViewModel {
 
     private final MutableLiveData<String> mText;
 
-    public SlideshowViewModel() {
+    public WishListViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("This is wish list fragment");
     }
 
     public LiveData<String> getText() {
