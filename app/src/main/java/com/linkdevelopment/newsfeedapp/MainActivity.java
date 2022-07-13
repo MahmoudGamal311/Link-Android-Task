@@ -1,5 +1,6 @@
 package com.linkdevelopment.newsfeedapp;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -14,6 +15,8 @@ import androidx.navigation.ui.NavigationUI;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.linkdevelopment.newsfeedapp.Data.Remote.APIService;
+import com.linkdevelopment.newsfeedapp.Data.Remote.ApiUtils;
 import com.linkdevelopment.newsfeedapp.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,9 +24,16 @@ public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
 
+    public static APIService mService;
+    public static Context context;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mService = ApiUtils.getApiService();
+        context = getApplicationContext();
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
